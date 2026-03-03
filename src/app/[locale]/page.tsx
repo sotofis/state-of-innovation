@@ -48,13 +48,10 @@ export default async function HomePage({
     { value: 10, suffix: "+", label: t("statsCountries"), icon: Zap },
   ];
 
+  const tk = await getTranslations({ locale, namespace: "keynote" });
   const teachingItems = [
-    "Vienna University of Economics & Business",
-    "University of Applied Sciences (Austrian Marketing University)",
-    "RWTH Aachen University (Prof. Frank Piller)",
-    "DTU Executive School of Business (Prof. Sören Salomo)",
-    "JTBD SUMMIT EUROPE — Vienna",
-    "Medtech Summit Stuttgart / Innovation Roundtable Copenhagen",
+    tk("teaching1"), tk("teaching2"), tk("teaching3"),
+    tk("teaching4"), tk("teaching5"), tk("teaching6"),
   ];
 
   return (
@@ -109,7 +106,7 @@ export default async function HomePage({
                 className="eyebrow mb-4"
                 style={{ color: "var(--blue)" }}
               >
-                Entrepreneur & Founder
+                {t("aboutEyebrow")}
               </p>
               <h2
                 className="text-4xl font-bold mb-6 leading-tight"
@@ -121,26 +118,9 @@ export default async function HomePage({
                 className="space-y-4 text-base leading-relaxed"
                 style={{ color: "var(--text-muted)" }}
               >
-                <p>
-                  Hello, my name is Martin Pattera. I am the managing partner
-                  of MYLES Strategy & Innovation GmbH. I have an MBA from the
-                  Vienna University of Economics and Business and have been
-                  involved in innovation and growth for over twenty years.
-                </p>
-                <p>
-                  I love learning and understanding contexts. Innovation
-                  requires a creative heart as well as a cool head. When the
-                  two work together, a lot of energy is released. That&apos;s
-                  what I live for.
-                </p>
-                <p>
-                  Before joining MYLES, I built up Edizon Innovation GmbH as a
-                  leading innovation consultancy in Europe. I held key positions
-                  at Roland Berger Strategy Consultants and Mayr-Melnhof
-                  Karton, with expertise across medical technology, IT,
-                  mechanical engineering, mobility, construction, and consumer
-                  goods.
-                </p>
+                <p>{t("aboutBody1")}</p>
+                <p>{t("aboutBody2")}</p>
+                <p>{t("aboutBody3")}</p>
               </div>
               <a
                 href="https://www.linkedin.com/in/martinpattera/"
@@ -177,7 +157,7 @@ export default async function HomePage({
                   className="font-bold"
                   style={{ color: "var(--text)" }}
                 >
-                  Lectures & Teaching
+                  {t("teachingTitle")}
                 </h3>
               </div>
               <ul className="space-y-3.5">
@@ -245,7 +225,7 @@ export default async function HomePage({
               ))}
             </div>
           ) : (
-            <p style={{ color: "var(--text-muted)" }}>Loading episodes…</p>
+            <p style={{ color: "var(--text-muted)" }}>{t("loadingEpisodes")}</p>
           )}
 
           <div className="flex sm:hidden mt-8 justify-center">
@@ -314,22 +294,10 @@ export default async function HomePage({
                 delayStart={0.2}
               >
                 {[
-                  {
-                    title: "Outcome-Driven Innovation®",
-                    body: "Methodology-based growth strategy that outperforms traditional approaches 5×.",
-                  },
-                  {
-                    title: "Jobs-to-be-Done",
-                    body: "Understanding what customers truly hire your product to do.",
-                  },
-                  {
-                    title: "Product Management",
-                    body: "Building bridges between technology and business value.",
-                  },
-                  {
-                    title: "Digital Transformation",
-                    body: "Navigating the intersection of innovation and AI.",
-                  },
+                  { title: t("teaserCard1Title"), body: t("teaserCard1Body") },
+                  { title: t("teaserCard2Title"), body: t("teaserCard2Body") },
+                  { title: t("teaserCard3Title"), body: t("teaserCard3Body") },
+                  { title: t("teaserCard4Title"), body: t("teaserCard4Body") },
                 ].map((card) => (
                   <StaggerChild key={card.title}>
                     <div
@@ -365,7 +333,7 @@ export default async function HomePage({
         <div className="max-w-3xl mx-auto px-6 text-center">
           <AnimateIn>
             <p className="eyebrow mb-4" style={{ color: "var(--blue)" }}>
-              Let&apos;s work together
+              {t("ctaEyebrow")}
             </p>
             <h2
               className="text-4xl sm:text-5xl font-bold mb-5 leading-tight"

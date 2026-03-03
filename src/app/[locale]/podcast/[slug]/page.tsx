@@ -149,7 +149,7 @@ export default async function EpisodePage({
                     color: palette.accent,
                   }}
                 >
-                  Episode #{episode.episodeNumber}
+                  {t("episodeLabel")} #{episode.episodeNumber}
                 </span>
               )}
 
@@ -162,7 +162,7 @@ export default async function EpisodePage({
 
               {episode.guests[0] && (
                 <p className="text-base font-medium" style={{ color: heroMutedColor }}>
-                  with {episode.guests[0].name}
+                  {t("with")} {episode.guests[0].name}
                 </p>
               )}
 

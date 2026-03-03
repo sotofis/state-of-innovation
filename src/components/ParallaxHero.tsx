@@ -114,13 +114,13 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
             variants={itemVariants}
             className="text-5xl sm:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight"
           >
-            <span style={{ color: "var(--text)" }}>Innovation </span>
+            <span style={{ color: "var(--text)" }}>{t("heroLine1")}</span>
             <br />
-            <span style={{ color: "var(--text)" }}>is not </span>
-            <span className="gradient-heading">chance</span>
+            <span style={{ color: "var(--text)" }}>{t("heroLine2")}</span>
+            <span className="gradient-heading">{t("heroGrad1")}</span>
             <br />
-            <span style={{ color: "var(--text)" }}>— it&apos;s a </span>
-            <span className="gradient-heading">method.</span>
+            <span style={{ color: "var(--text)" }}>{t("heroLine3")}</span>
+            <span className="gradient-heading">{t("heroGrad2")}</span>
           </motion.h1>
 
           {/* Sub */}
@@ -164,7 +164,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
             className="text-sm"
             style={{ color: "var(--text-faint)" }}
           >
-            Trusted by Liebherr, Eaton, Teleflex & more
+            {t("trusted")}
           </motion.p>
         </motion.div>
 
@@ -225,7 +225,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
                 className="text-xs font-medium"
                 style={{ color: "var(--text-muted)" }}
               >
-                Episodes
+                {t("statsEpisodes")}
               </p>
             </motion.div>
 
@@ -246,7 +246,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
                 className="text-xs"
                 style={{ color: "var(--text-faint)" }}
               >
-                Founder & CEO
+                {t("founderRole")}
               </p>
             </motion.div>
           </div>
@@ -264,7 +264,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
           className="text-xs font-medium tracking-widest uppercase"
           style={{ color: "var(--text-faint)" }}
         >
-          Scroll
+          {t("scrollLabel")}
         </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}

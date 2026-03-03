@@ -46,15 +46,9 @@ export default async function KeynotePage({
   ];
 
   const teachingItems = [
-    "Vienna University of Economics and Business",
-    "University of Applied Sciences — Austrian Marketing University",
-    "RWTH Aachen University (Prof. Frank Piller)",
-    "DTU Executive School of Business (Prof. Sören Salomo)",
-    "JTBD Master Class Vienna (1-day)",
-    "JTBD SUMMIT EUROPE — Vienna (Host & Speaker)",
-    "Best Practice Classes at Fortune 500 companies (2-day)",
-    "PFI events in Austria and Germany",
-    "Medtech Summit (Stuttgart) · Innovation Roundtable (Copenhagen)",
+    t("teaching1"), t("teaching2"), t("teaching3"),
+    t("teaching4"), t("teaching5"), t("teaching6"),
+    t("teaching7"), t("teaching8"), t("teaching9"),
   ];
 
   return (
@@ -316,10 +310,10 @@ export default async function KeynotePage({
               {t("ctaTitle")}
             </h2>
             <p className="text-lg mb-4" style={{ color: "var(--text-muted)" }}>
-              Vienna, Austria
+              {t("location")}
             </p>
             <p className="text-base mb-12" style={{ color: "var(--text-faint)" }}>
-              +43 681 844 90 612 · office@myles-innovation.com
+              {t("contact")}
             </p>
             <Link
               href={`/${locale}/booking`}

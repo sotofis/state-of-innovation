@@ -202,12 +202,12 @@ export default function BookingForm() {
                         onFocus={inputFocus}
                         onBlur={inputBlur}
                       >
-                        <option value="">— Select —</option>
-                        <option value="conference">Conference</option>
-                        <option value="corporate">Corporate Event</option>
-                        <option value="workshop">Workshop / Training</option>
-                        <option value="university">University / School</option>
-                        <option value="other">Other</option>
+                        <option value="">{t("selectPlaceholder")}</option>
+                        <option value="conference">{t("eventConference")}</option>
+                        <option value="corporate">{t("eventCorporate")}</option>
+                        <option value="workshop">{t("eventWorkshop")}</option>
+                        <option value="university">{t("eventUniversity")}</option>
+                        <option value="other">{t("eventOther")}</option>
                       </select>
                     </Field>
                     <Field label={t("fieldEventDate")}>
@@ -229,7 +229,7 @@ export default function BookingForm() {
                       onFocus={inputFocus}
                       onBlur={inputBlur}
                     >
-                      <option value="">— Select —</option>
+                      <option value="">{t("selectPlaceholder")}</option>
                       <option>&lt; €5,000</option>
                       <option>€5,000 – €10,000</option>
                       <option>€10,000 – €20,000</option>
@@ -240,7 +240,7 @@ export default function BookingForm() {
                     <textarea
                       name="message"
                       rows={5}
-                      placeholder="Tell us about your event, the audience, and what you hope to achieve…"
+                      placeholder={t("fieldMessagePlaceholder")}
                       className={inputClass + " resize-none"}
                       style={inputStyle}
                       onFocus={inputFocus}
@@ -301,7 +301,7 @@ export default function BookingForm() {
                   <Send size={16} />
                 )}
                 {loading
-                  ? "Sending…"
+                  ? t("sending")
                   : activeTab === "speaker"
                   ? t("submitSpeaker")
                   : t("submitGuest")}
