@@ -12,6 +12,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import AnimateIn, { StaggerIn, StaggerChild } from "@/components/AnimateIn";
+import ClientLogos from "@/components/ClientLogos";
 
 export async function generateMetadata({
   params,
@@ -56,10 +57,18 @@ export default async function KeynotePage({
   ];
 
   const clients = [
-    "Liebherr", "Eaton Industries", "Teleflex", "Mitsubishi R&D Europe",
-    "Roche Diabetes Care", "Microsoft", "Kapsch TrafficCom",
-    "Voith Paper", "Coloplast", "Worthington Industries",
-    "Philips Medical", "Cox Automotive",
+    { name: "Liebherr",              domain: "liebherr.com" },
+    { name: "Eaton",                 domain: "eaton.com" },
+    { name: "Teleflex",              domain: "teleflex.com" },
+    { name: "Mitsubishi Electric",   domain: "mitsubishielectric.com" },
+    { name: "Roche",                 domain: "roche.com" },
+    { name: "Microsoft",             domain: "microsoft.com" },
+    { name: "Kapsch",                domain: "kapsch.net" },
+    { name: "Voith",                 domain: "voith.com" },
+    { name: "Coloplast",             domain: "coloplast.com" },
+    { name: "Worthington Industries",domain: "worthingtonindustries.com" },
+    { name: "Philips",               domain: "philips.com" },
+    { name: "Cox Automotive",        domain: "coxautomotive.com" },
   ];
 
   return (
@@ -145,34 +154,7 @@ export default async function KeynotePage({
       </section>
 
       {/* ── Clients strip ──────────────────────────────────────── */}
-      <section
-        className="py-14 border-b"
-        style={{ background: "var(--bg-soft)", borderColor: "var(--border)" }}
-      >
-        <div className="max-w-6xl mx-auto px-6">
-          <p
-            className="eyebrow text-center mb-8"
-            style={{ color: "var(--text-faint)" }}
-          >
-            {t("clientsTitle")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {clients.map((c) => (
-              <span
-                key={c}
-                className="px-4 py-2 rounded-xl text-sm font-medium border"
-                style={{
-                  background: "var(--bg)",
-                  borderColor: "var(--border)",
-                  color: "var(--text-muted)",
-                }}
-              >
-                {c}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ClientLogos title={t("clientsTitle")} logos={clients} />
 
       {/* ── About Martin as Speaker ────────────────────────────── */}
       <section className="py-28" style={{ background: "var(--bg)" }}>
