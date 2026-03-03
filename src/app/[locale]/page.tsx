@@ -115,12 +115,11 @@ export default async function HomePage({
                 {t("aboutTitle")}
               </h2>
               <div
-                className="space-y-4 text-base leading-relaxed"
+                className="space-y-5 text-lg leading-relaxed"
                 style={{ color: "var(--text-muted)" }}
               >
                 <p>{t("aboutBody1")}</p>
                 <p>{t("aboutBody2")}</p>
-                <p>{t("aboutBody3")}</p>
               </div>
               <a
                 href="https://www.linkedin.com/in/martinpattera/"
