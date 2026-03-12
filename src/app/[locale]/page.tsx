@@ -60,7 +60,7 @@ export default async function HomePage({
       <ParallaxHero locale={locale} />
 
       {/* ── STATS ─────────────────────────────────────────── */}
-      <section className="relative z-10 -mt-10">
+      <section className="relative z-10 mt-10">
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-white rounded-3xl shadow-[0_8px_60px_rgba(15,23,42,0.10)] border border-[var(--border)] p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s, i) => {
@@ -122,10 +122,10 @@ export default async function HomePage({
                 <p>{t("aboutBody2")}</p>
               </div>
               <a
-                href="https://www.linkedin.com/in/martinpattera/"
+                href="https://www.linkedin.com/in/outcomedriveninnovation/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-8 px-6 py-3 border-2 rounded-xl text-sm font-semibold transition-all hover:shadow-[0_4px_16px_rgba(37,99,235,0.2)] hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 border-2 rounded-xl text-sm font-semibold transition-all hover:shadow-[0_4px_16px_rgba(38,77,90,0.2)] hover:scale-[1.02]"
                 style={{
                   borderColor: "var(--blue)",
                   color: "var(--blue)",
@@ -278,8 +278,8 @@ export default async function HomePage({
               </p>
               <Link
                 href={`/${locale}/keynote`}
-                className="inline-flex items-center gap-2 px-8 py-4 font-bold rounded-2xl text-base transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(245,158,11,0.4)] active:scale-[0.98]"
-                style={{ background: "var(--gold)", color: "#0F172A" }}
+                className="inline-flex items-center gap-2 px-8 py-4 font-bold rounded-2xl text-base transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(234,217,21,0.4)] active:scale-[0.98]"
+                style={{ background: "var(--gold)", color: "#264D5A" }}
               >
                 {t("keynoteTeaserBtn")}
                 <ArrowRight size={18} />
@@ -349,7 +349,7 @@ export default async function HomePage({
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href={`/${locale}/booking`}
-                className="px-8 py-4 font-bold rounded-2xl text-white text-base transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(37,99,235,0.35)] active:scale-[0.98]"
+                className="px-8 py-4 font-bold rounded-2xl text-white text-base transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(38,77,90,0.35)] active:scale-[0.98]"
                 style={{ background: "var(--blue)" }}
               >
                 {t("ctaBook")}

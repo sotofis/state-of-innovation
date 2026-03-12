@@ -48,7 +48,7 @@ export default function PodcastPage({
           className="absolute inset-0 opacity-100"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.07) 0%, transparent 70%)",
+              "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(38,77,90,0.07) 0%, transparent 70%)",
           }}
         />
         <div className="relative max-w-6xl mx-auto px-6">
@@ -87,8 +87,8 @@ export default function PodcastPage({
               className="flex-shrink-0"
             >
               <div
-                className="relative w-52 h-52 rounded-3xl overflow-hidden border-2 shadow-[0_20px_60px_rgba(37,99,235,0.2)]"
-                style={{ borderColor: "rgba(37,99,235,0.15)" }}
+                className="relative w-52 h-52 rounded-3xl overflow-hidden border-2 shadow-[0_20px_60px_rgba(38,77,90,0.2)]"
+                style={{ borderColor: "rgba(38,77,90,0.15)" }}
               >
                 <Image
                   src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/40461767/40461767-1707127783562-061bacdf197c1.jpg"

@@ -24,7 +24,7 @@ function Logo({ name, domain }: LogoItem) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`https://logo.clearbit.com/${domain}`}
+      src={`https://img.logo.dev/${domain}?token=${process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN}&format=png&size=200`}
       alt={name}
       className="h-7 w-auto object-contain select-none"
       style={{

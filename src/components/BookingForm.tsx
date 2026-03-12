@@ -45,18 +45,28 @@ export default function BookingForm() {
   const [activeTab, setActiveTab] = useState<FormType>("speaker");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
+    setError(false);
     const data = Object.fromEntries(new FormData(e.currentTarget));
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ type: activeTab, ...data }),
-    }).catch(() => {});
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: activeTab, ...data }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error("send failed");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => setSubmitted(true), 400);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   const inputStyle = {
@@ -65,7 +75,7 @@ export default function BookingForm() {
   };
   const inputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     e.currentTarget.style.borderColor = "var(--blue)";
-    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(37,99,235,0.1)";
+    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(38,77,90,0.1)";
   };
   const inputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     e.currentTarget.style.borderColor = "var(--border)";
@@ -221,21 +231,6 @@ export default function BookingForm() {
                       />
                     </Field>
                   </div>
-                  <Field label={t("fieldBudget")}>
-                    <select
-                      name="budget"
-                      className={inputClass}
-                      style={inputStyle}
-                      onFocus={inputFocus}
-                      onBlur={inputBlur}
-                    >
-                      <option value="">{t("selectPlaceholder")}</option>
-                      <option>&lt; €5,000</option>
-                      <option>€5,000 – €10,000</option>
-                      <option>€10,000 – €20,000</option>
-                      <option>€20,000+</option>
-                    </select>
-                  </Field>
                   <Field label={t("fieldMessage")}>
                     <textarea
                       name="message"
@@ -289,10 +284,16 @@ export default function BookingForm() {
                 </>
               )}
 
+              {error && (
+                <p className="text-sm" style={{ color: "var(--pink)" }}>
+                  Something went wrong. Please try again or email us directly at office@myles-innovation.com.
+                </p>
+              )}
+
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 self-start flex items-center gap-2.5 px-8 py-4 font-bold text-white text-base rounded-2xl transition-all hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(37,99,235,0.35)] active:scale-[0.98] disabled:opacity-60"
+                className="mt-2 self-start flex items-center gap-2.5 px-8 py-4 font-bold text-white text-base rounded-2xl transition-all hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(38,77,90,0.35)] active:scale-[0.98] disabled:opacity-60"
                 style={{ background: "var(--blue)" }}
               >
                 {loading ? (

@@ -136,7 +136,7 @@ export default function Footer() {
               {t("followTitle")}
             </h4>
             <a
-              href="https://www.linkedin.com/in/martinpattera/"
+              href="https://www.linkedin.com/in/outcomedriveninnovation/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all"
@@ -146,9 +146,9 @@ export default function Footer() {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "rgba(37,99,235,0.2)";
+                (e.currentTarget as HTMLAnchorElement).style.background = "rgba(38,77,90,0.2)";
                 (e.currentTarget as HTMLAnchorElement).style.color = "white";
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(37,99,235,0.4)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(38,77,90,0.4)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.06)";
@@ -173,7 +173,21 @@ export default function Footer() {
           >
             © {new Date().getFullYear()} Martin Pattera. {t("rights")}
           </p>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
+            <Link
+              href="/en/imprint"
+              className="text-xs transition-colors"
+              style={{ color: "rgba(255,255,255,0.25)" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "rgba(255,255,255,0.6)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "rgba(255,255,255,0.25)")
+              }
+            >
+              Imprint
+            </Link>
+            <span style={{ color: "rgba(255,255,255,0.1)" }}>·</span>
             <Link
               href="/en"
               className="text-xs transition-colors"

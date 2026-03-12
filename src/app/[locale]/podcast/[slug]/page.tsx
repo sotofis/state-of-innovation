@@ -6,6 +6,7 @@ import { Linkedin, ArrowLeft, Clock, Calendar, ExternalLink } from "lucide-react
 import { fetchEpisodes, fetchEpisodeBySlug } from "@/lib/rss";
 import { extractPalette } from "@/lib/colors";
 import AnimateIn from "@/components/AnimateIn";
+import ShareButton from "@/components/ShareButton";
 
 export async function generateStaticParams() {
   const episodes = await fetchEpisodes().catch(() => []);
@@ -182,20 +183,23 @@ export default async function EpisodePage({
                 )}
               </div>
 
-              <a
-                href={episode.spotifyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 text-sm font-bold rounded-xl self-start transition-all hover:scale-[1.03] hover:brightness-110 shadow-lg"
-                style={{
-                  background: "#1DB954",
-                  color: "white",
-                  boxShadow: "0 4px 16px rgba(29,185,84,0.4)",
-                }}
-              >
-                <ExternalLink size={14} />
-                {t("listenSpotify")}
-              </a>
+              <div className="flex flex-wrap gap-3 mt-2">
+                <a
+                  href={episode.spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-xl self-start transition-all hover:scale-[1.03] hover:brightness-110 shadow-lg"
+                  style={{
+                    background: "#1DB954",
+                    color: "white",
+                    boxShadow: "0 4px 16px rgba(29,185,84,0.4)",
+                  }}
+                >
+                  <ExternalLink size={14} />
+                  {t("listenSpotify")}
+                </a>
+                <ShareButton title={episode.title} />
+              </div>
             </div>
           </div>
         </div>
@@ -281,7 +285,7 @@ export default async function EpisodePage({
                 Martin Pattera
               </p>
               <a
-                href="https://www.linkedin.com/in/martinpattera/"
+                href="https://www.linkedin.com/in/outcomedriveninnovation/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium hover:underline"

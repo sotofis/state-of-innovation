@@ -21,23 +21,29 @@ export async function POST(req: NextRequest) {
 
     const html = `
       <div style="font-family:system-ui,sans-serif;max-width:560px;margin:0 auto;">
-        <div style="background:#2563EB;padding:24px 32px;border-radius:12px 12px 0 0;">
+        <div style="background:#264D5A;padding:24px 32px;border-radius:12px 12px 0 0;">
           <h1 style="color:white;margin:0;font-size:20px;">${subject}</h1>
         </div>
         <div style="background:#f8fafc;padding:24px 32px;border-radius:0 0 12px 12px;">
           <table style="width:100%;border-collapse:collapse;">${rows}</table>
         </div>
         <p style="font-size:12px;color:#94a3b8;margin-top:16px;text-align:center;">
-          Sent from state-of-innovation.com
+          Sent from martinpattera.com
         </p>
       </div>`;
 
-    await resend.emails.send({
-      from: "website@state-of-innovation.com",
+    const result = await resend.emails.send({
+      from: "noreply@myles-innovation.com",
       to: "office@myles-innovation.com",
+      replyTo: body.email,
       subject,
       html,
     });
+
+    if (result.error) {
+      console.error("Resend error:", result.error);
+      return NextResponse.json({ ok: false, error: result.error }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {

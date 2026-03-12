@@ -57,7 +57,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
           className="w-full h-full rounded-full blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(38,77,90,0.25) 0%, transparent 70%)",
           }}
         />
       </motion.div>
@@ -71,7 +71,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
           className="w-full h-full rounded-full blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, rgba(245,158,11,0.2) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(234,217,21,0.2) 0%, transparent 70%)",
           }}
         />
       </motion.div>
@@ -101,7 +101,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
               style={{
                 background: "var(--blue-light)",
                 color: "var(--blue)",
-                borderColor: "rgba(37,99,235,0.2)",
+                borderColor: "rgba(38,77,90,0.2)",
               }}
             >
               <Mic size={12} />
@@ -118,9 +118,6 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
             <br />
             <span style={{ color: "var(--text)" }}>{t("heroLine2")}</span>
             <span className="gradient-heading">{t("heroGrad1")}</span>
-            <br />
-            <span style={{ color: "var(--text)" }}>{t("heroLine3")}</span>
-            <span className="gradient-heading">{t("heroGrad2")}</span>
           </motion.h1>
 
           {/* Sub */}
@@ -139,7 +136,7 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
               className="flex items-center gap-2.5 px-7 py-4 font-bold text-base text-white rounded-2xl transition-all hover:scale-[1.03] active:scale-[0.98]"
               style={{
                 background: "var(--blue)",
-                boxShadow: "0 4px 20px rgba(37,99,235,0.4)",
+                boxShadow: "0 4px 20px rgba(38,77,90,0.4)",
               }}
             >
               <Mic size={18} />
@@ -158,14 +155,6 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
             </Link>
           </motion.div>
 
-          {/* Social proof / trust line */}
-          <motion.p
-            variants={itemVariants}
-            className="text-sm"
-            style={{ color: "var(--text-faint)" }}
-          >
-            {t("trusted")}
-          </motion.p>
         </motion.div>
 
         {/* Photo column */}
@@ -183,14 +172,14 @@ export default function ParallaxHero({ locale }: ParallaxHeroProps) {
               className="absolute inset-0 rounded-[2rem] blur-2xl scale-90 opacity-60"
               style={{
                 background:
-                  "radial-gradient(ellipse, rgba(37,99,235,0.25) 0%, transparent 70%)",
+                  "radial-gradient(ellipse, rgba(38,77,90,0.25) 0%, transparent 70%)",
               }}
             />
 
             {/* Photo frame */}
             <motion.div
               className="relative w-[320px] h-[420px] sm:w-[380px] sm:h-[500px] rounded-[2rem] overflow-hidden border-2 shadow-photo"
-              style={{ borderColor: "rgba(37,99,235,0.1)" }}
+              style={{ borderColor: "rgba(38,77,90,0.1)" }}
               animate={{ y: [0, -8, 0] }}
               transition={{
                 duration: 5,

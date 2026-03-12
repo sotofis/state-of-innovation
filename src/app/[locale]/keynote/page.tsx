@@ -81,12 +81,12 @@ export default async function KeynotePage({
         <div
           aria-hidden
           className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full blur-3xl"
-          style={{ background: "rgba(245,158,11,0.10)" }}
+          style={{ background: "rgba(234,217,21,0.10)" }}
         />
         <div
           aria-hidden
           className="absolute bottom-0 -left-20 w-96 h-96 rounded-full blur-3xl"
-          style={{ background: "rgba(37,99,235,0.08)" }}
+          style={{ background: "rgba(38,77,90,0.08)" }}
         />
 
         <div className="relative max-w-6xl mx-auto px-6">
@@ -94,9 +94,9 @@ export default async function KeynotePage({
             <span
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold border mb-8"
               style={{
-                background: "rgba(245,158,11,0.1)",
+                background: "rgba(234,217,21,0.1)",
                 color: "var(--gold)",
-                borderColor: "rgba(245,158,11,0.2)",
+                borderColor: "rgba(234,217,21,0.2)",
               }}
             >
               {t("heroEyebrow")}
@@ -143,8 +143,8 @@ export default async function KeynotePage({
 
             <Link
               href={`/${locale}/booking`}
-              className="inline-flex items-center gap-2.5 px-8 py-4 font-bold text-base rounded-2xl transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(245,158,11,0.4)] active:scale-[0.98]"
-              style={{ background: "var(--gold)", color: "#0F172A" }}
+              className="inline-flex items-center gap-2.5 px-8 py-4 font-bold text-base rounded-2xl transition-all hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(234,217,21,0.4)] active:scale-[0.98]"
+              style={{ background: "var(--gold)", color: "#264D5A" }}
             >
               {t("ctaBtn")}
               <ArrowRight size={18} />
@@ -153,8 +153,8 @@ export default async function KeynotePage({
         </div>
       </section>
 
-      {/* ── Clients strip ──────────────────────────────────────── */}
-      <ClientLogos title={t("clientsTitle")} logos={clients} />
+      {/* ── Clients strip — hidden pending approval ─────────────── */}
+      {/* <ClientLogos title={t("clientsTitle")} logos={clients} /> */}
 
       {/* ── About Martin as Speaker ────────────────────────────── */}
       <section className="py-28" style={{ background: "var(--bg)" }}>
@@ -166,11 +166,11 @@ export default async function KeynotePage({
                 <div
                   aria-hidden
                   className="absolute inset-0 rounded-[2rem] blur-2xl scale-90 opacity-50"
-                  style={{ background: "radial-gradient(ellipse, rgba(37,99,235,0.2) 0%, transparent 70%)" }}
+                  style={{ background: "radial-gradient(ellipse, rgba(38,77,90,0.2) 0%, transparent 70%)" }}
                 />
                 <div
                   className="relative w-64 h-80 rounded-[2rem] overflow-hidden border-2 shadow-photo"
-                  style={{ borderColor: "rgba(37,99,235,0.1)" }}
+                  style={{ borderColor: "rgba(38,77,90,0.1)" }}
                 >
                   <Image
                     src="/martin.png"
@@ -221,7 +221,7 @@ export default async function KeynotePage({
                       className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium border"
                       style={{
                         background: "var(--blue-light)",
-                        borderColor: "rgba(37,99,235,0.15)",
+                        borderColor: "rgba(38,77,90,0.15)",
                         color: "var(--blue)",
                       }}
                     >
@@ -232,10 +232,10 @@ export default async function KeynotePage({
                 </div>
 
                 <a
-                  href="https://www.linkedin.com/in/martinpattera/"
+                  href="https://www.linkedin.com/in/outcomedriveninnovation/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 rounded-xl text-sm font-semibold transition-all hover:shadow-[0_4px_16px_rgba(37,99,235,0.2)] hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 rounded-xl text-sm font-semibold transition-all hover:shadow-[0_4px_16px_rgba(38,77,90,0.2)] hover:scale-[1.02]"
                   style={{ borderColor: "var(--blue)", color: "var(--blue)" }}
                 >
                   <Linkedin size={16} />
@@ -266,9 +266,9 @@ export default async function KeynotePage({
             {topics.map((topic) => {
               const Icon = topic.icon;
               return (
-                <StaggerChild key={topic.title}>
+                <StaggerChild key={topic.title} className="h-full">
                   <div
-                    className="flex gap-6 p-8 rounded-3xl border transition-all duration-300 cursor-default group hover:-translate-y-1 shadow-card hover:shadow-card-hover"
+                    className="flex gap-6 p-8 rounded-3xl border h-full transition-all duration-300 cursor-default group hover:-translate-y-1 shadow-card hover:shadow-card-hover"
                     style={{ background: "var(--bg)", borderColor: "var(--border)" }}
                   >
                     <div
@@ -328,7 +328,7 @@ export default async function KeynotePage({
                   <Quote
                     size={36}
                     className="mb-6 flex-shrink-0"
-                    style={{ color: "rgba(37,99,235,0.18)" }}
+                    style={{ color: "rgba(38,77,90,0.18)" }}
                   />
                   <p
                     className="text-lg leading-relaxed mb-8 flex-1"
@@ -336,21 +336,13 @@ export default async function KeynotePage({
                   >
                     &ldquo;{tm.quote}&rdquo;
                   </p>
-                  <div className="flex items-center gap-4 pt-6 border-t" style={{ borderColor: "var(--border)" }}>
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
-                      style={{ background: "var(--blue)" }}
-                    >
-                      {tm.initials}
-                    </div>
-                    <div>
-                      <p className="font-bold text-base" style={{ color: "var(--text)" }}>
-                        {tm.name}
-                      </p>
-                      <p className="text-sm mt-0.5" style={{ color: "var(--text-faint)" }}>
-                        {tm.role}
-                      </p>
-                    </div>
+                  <div className="pt-6 border-t" style={{ borderColor: "var(--border)" }}>
+                    <p className="font-bold text-base" style={{ color: "var(--text)" }}>
+                      {tm.name}
+                    </p>
+                    <p className="text-sm mt-0.5" style={{ color: "var(--text-faint)" }}>
+                      {tm.role}
+                    </p>
                   </div>
                 </div>
               </StaggerChild>
@@ -404,7 +396,7 @@ export default async function KeynotePage({
           aria-hidden
           className="absolute inset-0 opacity-30"
           style={{
-            background: "radial-gradient(ellipse at center, rgba(245,158,11,0.15) 0%, transparent 60%)",
+            background: "radial-gradient(ellipse at center, rgba(234,217,21,0.15) 0%, transparent 60%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
@@ -425,8 +417,8 @@ export default async function KeynotePage({
             </p>
             <Link
               href={`/${locale}/booking`}
-              className="inline-flex items-center gap-2.5 px-12 py-5 font-bold text-xl rounded-2xl transition-all hover:scale-[1.03] hover:shadow-[0_8px_40px_rgba(245,158,11,0.35)] active:scale-[0.98]"
-              style={{ background: "var(--gold)", color: "#0F172A" }}
+              className="inline-flex items-center gap-2.5 px-12 py-5 font-bold text-xl rounded-2xl transition-all hover:scale-[1.03] hover:shadow-[0_8px_40px_rgba(234,217,21,0.35)] active:scale-[0.98]"
+              style={{ background: "var(--gold)", color: "#264D5A" }}
             >
               {t("ctaBtn")}
               <ArrowRight size={22} />

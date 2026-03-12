@@ -6,29 +6,30 @@
 :root {
   /* Backgrounds */
   --bg:          #FFFFFF;
-  --bg-soft:     #F7F9FF;
-  --bg-section:  #EEF3FF;
-  --bg-dark:     #0C1222;
-  --bg-dark-2:   #111827;
-  --bg-dark-card:#161F38;
+  --bg-soft:     #F3F5F7;
+  --bg-section:  #EAF0F4;
+  --bg-dark:     #264D5A;
+  --bg-dark-2:   #1E3D49;
+  --bg-dark-card:#2F5D6E;
 
   /* Borders */
-  --border:      #E2E8F0;
-  --border-dark: #1E2D4A;
+  --border:      #E6E8EA;
+  --border-dark: rgba(255,255,255,0.10);
 
   /* Brand colours */
-  --blue:        #2563EB;
-  --blue-mid:    #3B82F6;
-  --blue-light:  #EFF6FF;
-  --blue-glow:   rgba(37,99,235,0.18);
-  --gold:        #F59E0B;
-  --gold-light:  #FFFBEB;
-  --gold-glow:   rgba(245,158,11,0.18);
+  --blue:        #264D5A;
+  --blue-mid:    #4489A2;
+  --blue-light:  #E8F4F7;
+  --blue-glow:   rgba(38,77,90,0.18);
+  --gold:        #EAD915;
+  --gold-light:  #FEFCE0;
+  --gold-glow:   rgba(234,217,21,0.18);
+  --pink:        #E44A81;
 
   /* Text */
   --text:        #0F172A;
   --text-muted:  #475569;
-  --text-faint:  #94A3B8;
+  --text-faint:  #BBC1C5;
 
   /* Navigation */
   --nav-height: 72px;
@@ -68,13 +69,13 @@ body {
    Typography Helpers
 ───────────────────────────────────────────────────────────── */
 .gradient-heading {
-  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 40%, #60A5FA 100%);
+  background: linear-gradient(135deg, #1a3540 0%, #264D5A 40%, #4489A2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient-gold {
-  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #FCD34D 100%);
+  background: linear-gradient(135deg, #C4B612 0%, #EAD915 50%, #F5EC75 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -94,18 +95,18 @@ body {
 }
 .shadow-card-hover {
   box-shadow:
-    0 8px 32px rgba(37,99,235,0.12),
-    0 2px 8px rgba(37,99,235,0.06),
+    0 8px 32px rgba(38,77,90,0.12),
+    0 2px 8px rgba(38,77,90,0.06),
     0 1px 3px rgba(15,23,42,0.04);
 }
 .shadow-gold-hover {
   box-shadow:
-    0 8px 32px rgba(245,158,11,0.14),
-    0 2px 8px rgba(245,158,11,0.08);
+    0 8px 32px rgba(234,217,21,0.14),
+    0 2px 8px rgba(234,217,21,0.08);
 }
 .shadow-photo {
   box-shadow:
-    0 30px 80px rgba(37,99,235,0.2),
+    0 30px 80px rgba(38,77,90,0.2),
     0 10px 30px rgba(15,23,42,0.12);
 }
 .glow-blue  { box-shadow: 0 0 60px var(--blue-glow); }
@@ -180,9 +181,9 @@ body {
 ───────────────────────────────────────────────────────────── */
 .mesh-bg {
   background:
-    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(37,99,235,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 110%, rgba(245,158,11,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(37,99,235,0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(38,77,90,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 110%, rgba(234,217,21,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(38,77,90,0.03) 0%, transparent 70%),
     var(--bg);
 }
 
@@ -195,6 +196,39 @@ body {
 .episode-description li        { margin-bottom: 0.4rem; }
 .episode-description a         { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
 .episode-description strong    { color: var(--text); }
+
+/* ─────────────────────────────────────────────────────────────
+   Legal / Imprint prose
+───────────────────────────────────────────────────────────── */
+.prose-legal h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.prose-legal h2:first-child { margin-top: 0; }
+.prose-legal h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  margin-top: 2rem;
+}
+.prose-legal p {
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 0.925rem;
+}
+.prose-legal a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-legal a:hover { opacity: 0.8; }
 
 /* ─────────────────────────────────────────────────────────────
    Glass card (for dark sections)

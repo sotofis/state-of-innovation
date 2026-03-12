@@ -53,10 +53,11 @@ export default function EpisodeCard({
         delay: (index % 4) * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
+      className="h-full"
     >
       <Link
         href={href}
-        className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 shadow-card hover:shadow-card-hover"
+        className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 shadow-card hover:shadow-card-hover"
       >
         {/* Artwork */}
         <div className="relative aspect-square overflow-hidden">
