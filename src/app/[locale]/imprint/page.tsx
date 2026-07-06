@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowLeft } from "lucide-react";
 
 export async function generateMetadata() {
-  return { title: "Imprint & Privacy Policy — Martin Pattera" };
+  return { title: "Imprint & Privacy Policy — State of Innovation" };
 }
 
 export default function ImprintPage() {
@@ -43,46 +43,79 @@ export default function ImprintPage() {
       >
         <div className="max-w-3xl mx-auto px-6">
 
-          {/* Contact card */}
+          {/* Imprint — company card */}
           <div
             className="rounded-3xl border p-8 mb-16 shadow-card"
             style={{ background: "var(--bg-soft)", borderColor: "var(--border)" }}
           >
+            <p className="eyebrow mb-2" style={{ color: "var(--blue)" }}>
+              Imprint — Information pursuant to § 5 ECG and § 25 MedienG
+            </p>
             <h2
               className="text-2xl font-bold mb-6"
               style={{ color: "var(--text)" }}
             >
-              Martin Pattera
+              State of Innovation GmbH
             </h2>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" style={{ color: "var(--blue)" }} />
                 <p style={{ color: "var(--text-muted)" }}>
-                  Gusshausstrasse 18/1A<br />
-                  1040 Wien, Österreich
+                  Mahlerstraße 7/25<br />
+                  1010 Wien, Österreich
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="flex-shrink-0" style={{ color: "var(--blue)" }} />
                 <a
-                  href="tel:+436818449061"
+                  href="tel:+436764081222"
                   className="hover:underline"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  +43 681 844 90 612
+                  +43 676 4081222
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="flex-shrink-0" style={{ color: "var(--blue)" }} />
                 <a
-                  href="mailto:martin.pattera@myles-innovation.com"
+                  href="mailto:office@state-of-innovation.com"
                   className="hover:underline"
                   style={{ color: "var(--text-muted)" }}
                 >
-                  martin.pattera@myles-innovation.com
+                  office@state-of-innovation.com
                 </a>
               </div>
             </div>
+
+            <dl
+              className="mt-8 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm"
+              style={{ borderTop: "1px solid var(--border)", color: "var(--text-muted)" }}
+            >
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--text)" }}>Company register</dt>
+                <dd>FN 680807 m, Handelsgericht Wien</dd>
+              </div>
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--text)" }}>VAT ID (UID)</dt>
+                <dd>ATU83384106</dd>
+              </div>
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--text)" }}>Managing Director</dt>
+                <dd>Philipp Pattera</dd>
+              </div>
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--text)" }}>Object of the company</dt>
+                <dd>Event management and management consulting</dd>
+              </div>
+              <div className="sm:col-span-2">
+                <dt className="font-semibold" style={{ color: "var(--text)" }}>Supervisory authority</dt>
+                <dd>Magistratisches Bezirksamt für den 1. und 8. Bezirk</dd>
+              </div>
+            </dl>
+
+            <p className="mt-6 text-sm" style={{ color: "var(--text-faint)" }}>
+              The State of Innovation podcast is a brand of State of Innovation GmbH. Host: Martin Pattera.
+            </p>
           </div>
 
           {/* Privacy Policy */}
@@ -105,7 +138,7 @@ export default function ImprintPage() {
             <p>We use appropriate organizational and technical precautions to protect your personal data. These precautions specifically include protections against unauthorized, unlawful or accidental access, processing, loss, use and manipulation. Notwithstanding our efforts to maintain a consistently high level of due diligence, it cannot be ruled out that information you provide to us over the Internet will be viewed and used by others. Therefore, please note that we accept no liability whatsoever for the disclosure of information based on errors in the transfer of the data and/or through unauthorized access by third parties.</p>
 
             <h3>5. Recipients of the data</h3>
-            <p>Your personal data, including your name, address, telephone number, company, company position, and email address will occasionally be transmitted to contracted processors with which MYLES has concluded a specific processing agreement.</p>
+            <p>Your personal data, including your name, address, telephone number, company, company position, and email address will occasionally be transmitted to contracted processors with which State of Innovation GmbH has concluded a specific processing agreement.</p>
 
             <h3>6. Privacy policy for the use of Google Analytics</h3>
             <p>This website uses functions included in Google Analytics web analytics services. The service provider is Google Inc. 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics uses "cookies" — text files stored on your computer that enable analysis of your website use. The information generated by the cookie about your use of this website is usually transmitted to a Google server in the USA and stored there.</p>
@@ -122,7 +155,7 @@ export default function ImprintPage() {
             <p>Opt out: <a href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" target="_blank" rel="noopener noreferrer">LinkedIn opt-out</a></p>
 
             <h3>9. Use of Zoom</h3>
-            <p>MYLES Innovation GmbH uses the "Zoom" service for the purpose of location-independent communication. The service provider Zoom Video Communications, Inc processes traffic and usage data to fulfill contractual obligations. Privacy policy: <a href="https://zoom.us/de-de/privacy.html" target="_blank" rel="noopener noreferrer">zoom.us/privacy</a></p>
+            <p>State of Innovation GmbH uses the "Zoom" service for the purpose of location-independent communication. The service provider Zoom Video Communications, Inc processes traffic and usage data to fulfill contractual obligations. Privacy policy: <a href="https://zoom.us/de-de/privacy.html" target="_blank" rel="noopener noreferrer">zoom.us/privacy</a></p>
 
             <h3>10. Use of Clickmeeting</h3>
             <p>ClickMeeting (ClickMeeting Spółka z ograniczoną odpowiedzialnością, ul. Arkońska 6/A4, 80-387 Gdańsk, Poland) is used for webinars. By participating, participants consent to their contact details being processed by Clickmeeting solely for the purpose of holding the webinars.</p>
@@ -138,13 +171,13 @@ export default function ImprintPage() {
 
             <h3>14. Your rights</h3>
             <p>As a data subject you have the following rights: right to information about your personal data, right to rectification or restriction of processing, right to decline processing, and right to data portability. If you believe that the processing of your data violates data protection law, you may file a complaint with the Data Protection Authority.</p>
-            <p>To revoke consent at any time, please contact: <a href="mailto:office@myles-innovation.com">office@myles-innovation.com</a></p>
+            <p>To revoke consent at any time, please contact: <a href="mailto:office@state-of-innovation.com">office@state-of-innovation.com</a></p>
 
             <h3>15. Social plugins</h3>
             <p>The website contains social plugins from the following social networks: LinkedIn Ireland Unlimited Company, Dublin 2; XING SE, Dammtorstrasse 30, 20354 Hamburg; YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066; Meetup (subsidiary of WeWork Companies Inc., 115 W 18th St., New York, NY 10011). When you visit a page with these plugins, your browser connects directly to their servers.</p>
 
             <h3>16. Linking to other websites</h3>
-            <p>Our website also contains links to other websites. The privacy policy described here does not apply to those websites. We ask you to visit those websites directly for their privacy information. MYLES cannot be held liable for any action taken on or content of those websites.</p>
+            <p>Our website also contains links to other websites. The privacy policy described here does not apply to those websites. We ask you to visit those websites directly for their privacy information. State of Innovation GmbH cannot be held liable for any action taken on or content of those websites.</p>
 
             <h3>17. Revocation of advertising emails</h3>
             <p>The use of published contact information for sending unsolicited advertising and information materials is hereby prohibited. The operators expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information.</p>
