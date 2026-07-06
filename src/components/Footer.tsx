@@ -112,7 +112,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3 mb-8">
               <a
-                href="mailto:office@myles-innovation.com"
+                href="mailto:office@state-of-innovation.com"
                 className="text-sm transition-colors"
                 style={{ color: "rgba(255,255,255,0.5)" }}
                 onMouseEnter={(e) =>
@@ -122,7 +122,7 @@ export default function Footer() {
                   (e.currentTarget.style.color = "rgba(255,255,255,0.5)")
                 }
               >
-                office@myles-innovation.com
+                office@state-of-innovation.com
               </a>
               <p className="text-sm" style={{ color: "rgba(255,255,255,0.35)" }}>
                 Vienna, Austria
@@ -171,7 +171,7 @@ export default function Footer() {
             className="text-xs"
             style={{ color: "rgba(255,255,255,0.25)" }}
           >
-            © {new Date().getFullYear()} Martin Pattera. {t("rights")}
+            © {new Date().getFullYear()} State of Innovation GmbH. {t("rights")}
           </p>
           <div className="flex gap-5 items-center">
             <Link

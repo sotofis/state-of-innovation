@@ -286,7 +286,7 @@ export default function BookingForm() {
 
               {error && (
                 <p className="text-sm" style={{ color: "var(--pink)" }}>
-                  Something went wrong. Please try again or email us directly at office@myles-innovation.com.
+                  Something went wrong. Please try again or email us directly at office@state-of-innovation.com.
                 </p>
               )}
 
